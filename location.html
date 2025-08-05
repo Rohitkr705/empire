@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <title>Locations</title>
+    <style>
+	  .oval-box {
+    		background-color: #f9e7d2;
+    		padding: 20px;
+    		text-align: right;
+		position: fixed;
+    		width: 100%;
+    		z-index: 1000;
+    		top: 0;
+    		
+	}
+
+	.oval-box a.order-link {
+    		padding: 12px 20px;
+    		
+	}
+        .oval-box a {
+            color: #343a40;
+            margin-right: 20px;
+        }
+
+        .oval-box a.order-link {
+            color: #fff;
+            background-color: #dc3545;
+        }
+
+	 .location-item {
+            text-align: center;
+	
+        }
+	.location-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 20px; /* Adjust as needed */
+        }
+
+        .location-item {
+            text-align: center;
+            width: 30%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+       
+
+	
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+      font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .location-section {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .location-item {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .location-item img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            background-color: #f8b500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-fluid p-0" style="padding: 20px 0;">
+        <div class="oval-box" style="padding: 15px; ">
+        <a href="about.html" class="mr-4" >About</a>
+        <a href="location.html" class="mr-4" >Location</a>
+ <a href="C:\Users\shrid\OneDrive\Documents\blog.html" class="mr-4"> Our Blog</a>
+        <a href="C:\Users\shrid\OneDrive\Documents\orderfood.html" class="order-link" style="padding: 8px 20px; border-radius: 40px;">Order Food</a>
+    </div>
+</div>
+<br><br>
+
+   <div class="location-section">
+        <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\brook.jpg" alt="Location 1">
+            <h3>Brookfield</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360View()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMaps()">Locate Us</button>
+            </div>
+        </div>
+
+        <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\devanahalli.jpg" alt="Location 2">
+            <h3>Devanahalli</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360ViewDevanahalli()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMapsDevanahalli()">Locate Us</button>
+            </div>
+        </div>
+        
+        <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\castle.webp" alt="Location 3">
+            <h3>Castle street</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360ViewCastleStreet()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMapsCastleStreet()">Locate Us</button>
+            </div>
+        </div>
+
+         <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\34a30e77063259.5c7cf3a10dcb1.jpg" alt="Location 4">
+            <h3>Church Street</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360ViewChurchStreet()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMapsChurchStreet()">Locate Us</button>
+            </div>
+        </div>
+ 
+        <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\hsr.jpg" alt="Location 5">
+            <h3>HSR Layout</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360ViewHSRLayout()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMapsHSRLayout()">Locate Us</button>
+            </div>
+        </div>
+ 
+         <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\restaurants.jpg" alt="Location 6">
+            <h3>Indiranagar</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360ViewIndiranagar()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMapsIndiranagar()">Locate Us</button>
+            </div>
+        </div>
+
+        <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\jp.jpg" alt="Location 7">
+            <h3>JP Nagar</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360ViewJPNagar()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMapsJPNagar()">Locate Us</button>
+            </div>
+        </div>
+ 
+        <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\kgu.jpg" alt="Location 8">
+            <h3>Jaynagar</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360ViewJaynagar()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMapsJaynagar()">Locate Us</button>
+            </div>
+        </div>
+
+         <div class="location-item">
+            <img src="C:\Users\shrid\Downloads\kanak.avif" alt="Location 9">
+            <h3>Kanakapura Road</h3>
+            <div class="buttons-container">
+                <button class="button" onclick="open360ViewKanakapura()">360 Degree View</button>
+                <button class="button" onclick="openGoogleMapsKanakapura()">Locate Us</button>
+            </div>
+        </div>
+
+     
+    </div>
+
+   <script>
+        function open360View() {
+            window.open("https://www.hotelempire.in/360/empire/brookfield/", "_blank");
+        }
+
+        function openGoogleMaps() {
+            var address = "Empire Hotel Brookfield, Address Line 1, City 1";
+            var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+            window.open(mapUrl, "_blank");
+        }
+	 function open360ViewDevanahalli() {
+            window.open("https://www.hotelempire.in/360/empire/hsr-layout/", "_blank");
+        }
+
+        function openGoogleMapsDevanahalli() {
+            var address = "Empire Hotel Devanahalli, Address Line, City";
+            var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+            window.open(mapUrl, "_blank");
+        }
+	function open360ViewCastleStreet() {
+            window.open("https://www.hotelempire.in/360/empire/castle-street/", "_blank");
+        }
+
+        function open360ViewChurchStreet() {
+            window.open("https://www.hotelempire.in/360/empire/church-street/", "_blank");
+        }
+
+        function openGoogleMapsChurchStreet() {
+            var address = "Empire Hotel Church Street, Address Line, City";
+            var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+            window.open(mapUrl, "_blank");
+        }
+	function open360ViewHSRLayout() {
+            window.open("https://www.hotelempire.in/360/empire/hsr-layout/", "_blank");
+        }
+
+        function openGoogleMapsHSRLayout() {
+            var address = "Empire Hotel HSR Layout, Address Line, City";
+            var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+            window.open(mapUrl, "_blank");
+        }
+	 function open360ViewIndiranagar() {
+            window.open("https://www.hotelempire.in/360/empire/indira-nagar/", "_blank");
+        }
+
+        function openGoogleMapsIndiranagar() {
+            var address = "Empire Hotel Indiranagar, Address Line, City";
+            var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+            window.open(mapUrl, "_blank");
+        }
+	 function open360ViewJPNagar() {
+            window.open("https://www.hotelempire.in/360/empire/jp-nagar/", "_blank");
+        }
+
+        function openGoogleMapsJPNagar() {
+            var address = "Empire Hotel JP Nagar, Address Line, City";
+            var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+            window.open(mapUrl, "_blank");
+        }
+	function open360ViewJaynagar() {
+            window.open("https://www.hotelempire.in/360/empire/jaya-nagar/", "_blank");
+        }
+
+        function openGoogleMapsJaynagar() {
+            var address = "Empire Hotel Jayanagar, Address Line, City";
+            var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+            window.open(mapUrl, "_blank");
+        }
+	function open360ViewKanakapura() {
+            window.open("https://www.hotelempire.in/360/empire/kanakapura-road/", "_blank");
+        }
+
+        function openGoogleMapsKanakapura() {
+            var address = "Empire Hotel Kanakapura Road, Address Line, City";
+            var mapUrl = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+            window.open(mapUrl, "_blank");
+        }
+        
+    </script>
+      
+
+</body>
+
+</html>

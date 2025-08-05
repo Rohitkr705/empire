@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food Zone</title>
+	<link rel="shortcut icon" href="profile.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="C:\Users\shrid\OneDrive\Documents\styleeee.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<style>
+	* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    text-transform: capitalize;
+}
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --orange: #f79f1f;
+    --text-color-1: #444;
+    --text-color-2: #666;
+    --bg-color-1: #fff;
+    --bg-color-2: #eee;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: var(--bg-color-2);
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--text-color-1);
+    font-size: 3.5rem;
+}
+
+.heading span {
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: var(--orange);
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 90%, 100% 83%, 100% 100%, 0% 100%);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 7%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo{
+	font-weight:bolder;
+	font-size:2.2rem;
+	color:var(--text-color-1);
+}
+.header .logo i{
+	color:var(--orange);
+}
+
+.header .search-form {
+    background: var(--bg-color-2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    width: 50rem;
+}
+
+
+.header .search-form input{
+	height:100%;
+	width:100%;
+	background: none;
+	text-transform:none;
+	font-size:1.5rem;
+	color:var(--text-color-1);
+	padding:1rem;
+}
+.header .search-form label{
+	font-size:2rem;
+	margin-right:1.5rem;
+	color:var(--text-color-1);
+	cursor:pointer;
+}
+.header .search-form label:hover{
+	color:var(--orange);
+}
+.header .icons div{
+	height:4.5rem;
+	width:4.5rem;
+	line-height:4.5rem;
+	border-radius:0.5rem;
+	font-size:2rem;
+	margin-left:0.5rem;
+	background:var(--bg-color-2);
+	color:var(--text-color-1);
+	cursor:pointer;
+	text-align:center;
+}
+
+#search-btn{
+	display:none;
+}
+.header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--bg-color-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 18rem; /* Adjust the width as per your requirement */
+    transform-origin: top right;
+    transform: scale(0);
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem; /* Adjust the padding as per your requirement */
+}
+
+.header .navbar.active {
+    display: flex;
+    transform: scale(1);
+}
+
+.header .navbar a {
+    display: block;
+    margin: 0.8rem 0; /* Adjust the margin as per your requirement */
+    padding: 1rem;
+    color: var(--text-color-1);
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+    background: var(--bg-color-2);
+    padding-left: 2rem;
+}
+
+/* --- */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu h1 {
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:khaki;
+}
+
+.menu-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px;
+    width: 300px;
+    background-color:peru
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.price-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.add-to-cart button {
+    padding: 5px 10px;
+    border: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.add-to-cart button:hover {
+    background: green;
+}
+
+.card{
+    margin-top: 12px;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .menu-item {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<header class="header">
+	<a href="" class="logo"><i class="fas fa-utensils"></i>Empire Since 1988</a>
+<form action="" class="search-form">
+	<input type="search" id="searchbox" placeholder="Search Here...">
+	<label for="searchbox" class="fas fa-search"></label>
+</form>
+	<div class="icons">
+		<div id="search-btn" class="fas fa-search"></div>
+		 <div id="share-btn" class="fas fa-share" onclick="redirectToPage()"></div>
+		<div id="user-btn" class="fas fa-user"></div>
+		<div id="menu-btn" class="fas fa-bars"></div>
+
+	</div>
+	<nav id="navbar" class="navbar">
+    <a href="#home">Home</a>
+    <!-- Update the href attributes to the corresponding section IDs -->
+    <a href="#packages">Packages</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#blogs">Blogs</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+</header>
+
+<section class="home" id="home">
+	<div class="image">
+		<img src="C:\Users\shrid\Downloads\cheeseburger-hamberger-white-background-fast-food_130265-3211.avif" alt="">
+	</div>
+	<div class="content">
+		<h3>Most Tasty Burger For You</h3>
+		<p>khsdkjhdskfhkdsjhfkdshvkjfhvkjhfjv</p>
+		<a href="" class="btn">Explore Now</a>
+	</div>
+</section>	
+
+<section class="form-container">
+	<form action="">
+	<div class="inputbox">
+	<span>Where</span>
+	<input type="text" placeholder="search places">
+	</div>
+
+	<div class="inputbox">
+	<span>When</span>
+	<input type="date">
+	</div>
+
+	<div class="inputbox">
+	<span>Time</span>
+	<input type="time" >
+	</div>
+	<input type="submit" value="Order Now" class="btn">
+
+</form>
+</section>
+<div class="container menu" >
+  <h2 style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 2.6em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">MENU</h2>
+        
+        <br>
+        
+        <br>
+        
+        <br>
+        <br>
+        <div class="menu-items">
+            <!-- Example item, replicate for each menu item -->
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.13 AM (1).jpeg" alt="Food 1">
+                <h2>Naden breakfast</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.00</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                       <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.13 AM.jpeg" alt="Food 1">
+                <h2>North <style></style></h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹8.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                        <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.15 AM (1).jpeg" alt="Food 1">
+                <h2>Idli</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                        <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.14 AM.jpeg" alt="Food 1">
+                <h2>Kadala curry</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                        <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.15 AM (2).jpeg" alt="Food 1">
+                <h2>Masala roti</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                        <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.15 AM (3).jpeg" alt="Food 1">
+                <h2>Paneer roti</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                       <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.15 AM.jpeg" alt="Food 1">
+                <h2>Nadann thali</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                        <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.13 AM (1).jpeg" alt="Food 1">
+                <h2>Chole with gravy</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                        <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.13 AM.jpeg" alt="Food 1">
+                <h2>idli with chutneey</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                       <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.13 AM.jpeg" alt="Food 1">
+                <h2>Kasaragod kadala curry</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                        <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.15 AM (1).jpeg" alt="Food 1">
+                <h2>Masala roti</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                        <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\WhatsApp Image 2023-10-31 at 7.21.15 AM (2).jpeg" alt="Food 1">
+                <h2>Paneer sanam</h2>
+                <p>Description of the food item 1.</p>
+                <div class="price-add">
+                    <span class="price">₹10.99</span>
+                    <div class="add-to-cart">
+                        <button class="minus">-</button>
+                        <span class="quantity">0</span>
+                        <button class="plus">+</button>
+                       <button class="card" onclick="goToCart()">ADD TO CART</button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Replicate the above item structure for other menu items -->
+        </div>
+    </div>
+
+    <script src="Style.js"></script>
+
+</body>
+
+<section class="packages" id="packages">
+    <h1 class="heading">Our <span>Foods</span></h1>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\OneDrive\Documents\34a30e77063259.5c7cf3a10dcb1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Pizzeria</h3>
+                <div class="price">
+                    290.99 <span>350.99</span>
+                </div>
+                <p>Enjoy the delicacy of pizzeria</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\OneDrive\Documents\8cbf63efaa667c9d310268a7b8056b54.avif" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Easy Bites</h3>
+                <div class="price">
+                    290.99 <span>350.99</span>
+                </div>
+                <p>Enjoy the delicacy of Easy Bites</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\OneDrive\Documents\2-dosa-indian-food-photography-by-shirish-sen.preview.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Dosa Empire</h3>
+                <div class="price">
+                    290.99 <span>350.99</span>
+                </div>
+                <p>Enjoy the delicacy of Dosa Empire</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\OneDrive\Documents\15 best multi-cuisine restaurants in Mumbai, New Delhi, Bengaluru, Kolkata and Goa.webp" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Empire Cuisine</h3>
+                <div class="price">
+                    290.99 <span>350.99</span>
+                </div>
+                <p>Enjoy the delicacy of Empire cuisine</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\OneDrive\Documents\c1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Shrimp Ecstacy</h3>
+                <div class="price">
+                    290.99 <span>350.99</span>
+                </div>
+                <p>Enjoy the delicacy of Shrimp Ecstacy</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\OneDrive\Documents\Chama-Mama-table-full-of-dishes.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Divine Thali </h3>
+                <div class="price">
+                    290.99 <span>350.99</span>
+                </div>
+                <p>Enjoy the delicacy of Divine thali</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+        <!-- Add other box elements similarly -->
+	
+</div>
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; margin-left: 8%;">
+    <form action="ourfood.html">
+        <input type="submit" class="btn" value="View more">
+    </form>
+</div>
+
+
+
+    </div>
+</section>
+
+<section class="pricing" id="pricing">
+	<h1 class="heading">Our<span>Pricing</span></h1>
+	<div class="box-container">
+		<div class="box">
+		<h3>basic plan</h3>
+		<div class="price">
+		<span>$</span>
+		<span class="amount">30</span>
+		<span>/mo</span>
+	</div>
+<ul>
+<li>10 days</li>
+<li>Food and drink</li>
+<li>Safety guide</li>
+<li>Insurance</li>
+<li>Free Delivery</li>
+</ul>
+<a href="" class="btn">choose plan</a>
+</div>
+
+<div class="box">
+		<h3>monthly plan</h3>
+		<div class="price">
+		<span>$</span>
+		<span class="amount">60</span>
+		<span>/mo</span>
+	</div>
+<ul>
+<li>10 days</li>
+<li>Food and drink</li>
+<li>Safety guide</li>
+<li>Insurance</li>
+<li>Free Delivery</li>
+</ul>
+<a href="" class="btn">choose plan</a>
+</div>
+<div class="box">
+		<h3>Yearly plan</h3>
+		<div class="price">
+		<span>$</span>
+		<span class="amount">120</span>
+		<span>/mo</span>
+	</div>
+<ul>
+<li>30 days</li>
+<li>Food and drink</li>
+<li>Safety guide</li>
+<li>Insurance</li>
+<li>Free Delivery</li>
+</ul>
+<a href="" class="btn">choose plan</a>
+</div>
+
+</div>
+</section>
+
+
+<section class="contact-form" id="contact">
+    <h1 class="heading"><span>Contact</span> Us</h1>
+    <form action="">
+        <div class="inputbox">
+            <input type="text" placeholder="name">
+            <input type="email" placeholder="email">
+        </div>
+
+        <div class="inputbox">
+            <input type="number" placeholder="number">
+            <input type="text" placeholder="subject">
+        </div>
+
+        <textarea name="" id="" cols="30" rows="10" placeholder="your message"></textarea>
+        <input type="submit" class="btn" value="send message">
+    </form>
+</section>
+
+
+<section class="blogs" id="blogs">
+	<h1 class="heading">Our<span> Blogs</span></h1>
+	<div class="box-container">
+		<div class="box">
+		<div class="image">
+		<img src="C:\Users\shrid\Downloads\Greek-Chicken-Kabobs4788-650x975.jpg" alt="">
+</div>
+<div class="content">
+<h3>What is bombay and hydrabadi biriyani?</h3>
+<a href="" class="btn">Read more</a>
+<div class="icons">
+<a href=""><i class="fas fa-calendar"></i>1st jan, 2022</a>
+<a href=""><i class="fas fa-user"></i>by admin</a>
+</div>
+</div>
+</div>
+
+<div class="box">
+		<div class="image">
+		<img src="C:\Users\shrid\Downloads\cheeseburger-hamberger-white-background-fast-food_130265-3211.avif" alt="">
+</div>
+<div class="content">
+<h3>What is bombay and hydrabadi biriyani?</h3>
+<a href="" class="btn">Read more</a>
+<div class="icons">
+<a href=""><i class="fas fa-calendar"></i>1st jan, 2022</a>
+<a href=""><i class="fas fa-user"></i>by admin</a>
+</div>
+</div>
+</div>
+
+
+
+<div class="box">
+		<div class="image">
+		<img src="C:\Users\shrid\Downloads\fb11bc94893011be4d57f229c94dc49c.jpg" alt="">
+</div>
+<div class="content">
+<h3>What is bombay and hydrabadi biriyani?</h3>
+<a href="" class="btn">Read more</a>
+<div class="icons">
+<a href=""><i class="fas fa-calendar"></i>1st jan, 2022</a>
+<a href=""><i class="fas fa-user"></i>by admin</a>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="footer">
+	<div class="box-container">
+	<div class="box">
+	<h3>Our branching</h3>
+	<a href=""><i class="fas fa-map-marker-alt"></i>India</a>
+	<a href=""><i class="fas fa-map-marker-alt"></i>russia</a>
+	<a href=""><i class="fas fa-map-marker-alt"></i>japan</a>
+	<a href=""><i class="fas fa-map-marker-alt"></i>France</a>
+	<a href=""><i class="fas fa-map-marker-alt"></i>Canada</a>
+
+</div>
+<div class="box">
+	<h3>Quick links</h3>
+	<a href=""><i class="fas fa-chevron-right"></i>Home</a>
+	<a href=""><i class="fas fa-chevron-right"></i>Packages</a>
+	<a href=""><i class="fas fa-chevron-right"></i>Services</a>
+	<a href=""><i class="fas fa-chevron-right"></i>Prices</a>
+	<a href=""><i class="fas fa-chevron-right"></i>Blogs</a>
+</div>
+<div class="box">
+	<h3>Contact-Info</h3>
+	<a href=""><i class="fas fa-phone"></i>+91 8967 7685 65</a>
+	<a href=""><i class="fas fa-phone"></i>+91 1234 6545 65</a>
+	<a href=""><i class="fas fa-envelop"></i>shri@gmail.com</a>
+	<a href=""><i class="fas fa-map-marker-alt"></i>Bangalore,India</a>
+</div>
+<div class="box">
+	<h3>Follow-us</h3>
+	<a href=""><i class="fab fa-facebook-f"></i>Facebook</a>
+	<a href=""><i class="fab fa-twitter"></i>Twitter</a>
+	<a href=""><i class="fab fa-instagram"></i>Instagram</a>
+	<a href=""><i class="fab fa-linkedin"></i>Linkedin</a>
+	<a href=""><i class="fab fa-pinterest"></i>Pinterest</a>
+</div>
+
+</div>
+
+</section>
+
+<script>
+	 function goToCart() {
+        window.location.href = "carttttt.html";
+    }
+    document.addEventListener('click', function (event) {
+        var navbar = document.getElementById('navbar');
+        var menuBtn = document.getElementById('menu-btn');
+
+        var isClickInsideNavbar = navbar.contains(event.target);
+        var isClickInsideMenuBtn = menuBtn.contains(event.target);
+
+        if (!isClickInsideNavbar && !isClickInsideMenuBtn) {
+            navbar.classList.remove('active');
+        } else if (isClickInsideMenuBtn) {
+            navbar.classList.toggle('active');
+        }
+    });
+function redirectToPage() {
+            window.location.href = "ghghgh.html";
+	document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const navbar = document.getElementById("navbar");
+
+    menuBtn.addEventListener("click", function() {
+        navbar.classList.toggle("active");
+    });
+});
+// -------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const plusButtons = document.querySelectorAll(".plus");
+    const minusButtons = document.querySelectorAll(".minus");
+    const quantities = document.querySelectorAll(".quantity");
+
+    plusButtons.forEach((button, index) => {
+        button.addEventListener("click", function () {
+            let quantity = parseInt(quantities[index].innerText);
+            quantities[index].innerText = quantity + 1;
+        });
+    });
+
+    minusButtons.forEach((button, index) => {
+        button.addEventListener("click", function () {
+            let quantity = parseInt(quantities[index].innerText);
+            if (quantity > 0) {
+                quantities[index].innerText = quantity - 1;
+            }
+        });
+    });
+});
+        }
+</script>
+
+
+
+
+</body>
+</html>
+

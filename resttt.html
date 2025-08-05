@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .oval-box {
+    		background-color: #f9e7d2;
+    		padding: 20px;
+    		text-align: right;
+    		
+	}
+			.food-name {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        color: #fff;
+        font-weight: bold;
+    }
+	.oval-box a.order-link {
+    		padding: 12px 20px;
+    		
+	}
+        .oval-box a {
+            color: #343a40;
+            margin-right: 20px;
+        }
+
+        .oval-box a.order-link {
+            color: #fff;
+            background-color: #dc3545;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .food-section {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 20px; /* Rounded corners */
+            overflow: hidden;
+            height: 300px; /* Adjust height as needed */
+        }
+
+        .food-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .food-details {
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .food-section:hover .food-details {
+            opacity: 1;
+        }
+
+        .food-details h3 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        .food-details p {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        .food-details .order-link {
+            display: block;
+            color: #fff;
+            background-color: #dc3545;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.3s; /* Smooth transition */
+        }
+
+        /* Style for the Trending Foods */
+        .food-name {
+            text-align: center;
+        }
+
+        .food-section:hover .order-link {
+            background-color: #fff;
+            color: #dc3545;
+        }
+
+        /* Middle buttons style */
+        .middle-buttons {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            line-height: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 50%;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: 0.3s;
+        }
+
+        .prev {
+            left: 5%;
+        }
+
+        .next {
+            right: 5%;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #dc3545;
+        }
+    </style>
+
+</head>
+
+<div class="container-fluid p-0" style="padding: 20px 0;">
+    <div class="oval-box" style="padding: 15px; ">
+        <a href="#about" class="mr-4" >About</a>
+        <a href="#location" class="mr-4" >Location</a>
+        <a href="#contact" class="mr-4" style="flex: 1;">Contact Us</a>
+        <a href="#" class="order-link" style="padding: 8px 20px; border-radius: 40px;">Order Food</a>
+    </div>
+</div>
+
+
+
+    <section id="home" class="py-5 text-center" style="margin: 0; padding: 0;">
+        <div class="container-fluid" style="margin: 0; padding: 0;">
+            <div class="row" style="margin: 0; padding: 0;">
+                <!-- Constant Image on the Left Side with Text -->
+                <div class="col-md-6 p-0" style="position: relative;">
+                    <img src="C:\Users\shrid\Downloads\madhus-mayfair-1639085143.jpg" style="width:100%; height:auto;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                        <h1 style="color: white; font-size: 3em;">Welcome to Our Restaurant</h1>
+                        <p style="color: white; font-size: 1.5em;">Discover the exquisite taste of our special dishes.</p>
+                    </div>
+                </div>
+                <!-- Slideshow on the Right Side -->
+                <div class="col-md-6 p-0 slideshow-container" style="position: relative;">
+
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\best-restaurants-beauty-essex.jpg" style="width:100%; height:auto; max-height: 600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\image.jpg" style="width:100%; max-height:600px">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\Chama-Mama-table-full-of-dishes.jpg" style="width:100%; max-height:600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\photo-1670058124043-4f55e08d0f8f.avif" style="width:100%; height:420px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\34a30e77063259.5c7cf3a10dcb1.jpg" style="width:100%;max-height:600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\get-inspired-food-photography-tips-1-f9283f1f-d5f8-11ea-bea9-f8bc127793a9.jpg" style="width:100%; height:420px; max-height:600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\restaurants.jpg" style="width:100%; height:420px; max-height:600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\Blog7.jpg" style="width:100%; height:420px; max-height:600px;">
+                    </div>
+
+                    <div class="middle-buttons">
+                        <button class="prev" onclick="plusSlides(-1)">❮</button>
+                        <button class="next" onclick="plusSlides(1)">❯</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section id="about" class="py-5">
+    <div class="container text-center">
+        <h2>TRENDING FOOD</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="food-section">
+                    <img src="C:\Users\shrid\Downloads\8cbf63efaa667c9d310268a7b8056b54.avif" alt="Easy bites">
+                    <div class="food-details">
+                        <h3>Easy bites</h3>
+                        <p>Delicious and quick bites perfect for any time of the day.</p>
+                        <a href="#" class="order-link">Order Now</a>
+
+                   
+                    <div class="food-name">Easy bites</div>
+                </div>
+
+            </div>
+        </div>
+
+                <div class="col-md-3">
+                    <div class="food-section">
+                        <img src="C:\Users\shrid\Downloads\fb11bc94893011be4d57f229c94dc49c.jpg" alt="Biriyani Buffet">
+                        <div class="food-details">
+                            <h3>Biriyani Buffet</h3>
+                            <p>Aromatic and flavorful biriyani served with refreshing raita.</p>
+                            <a href="#" class="order-link">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="food-section">
+                        <img src="C:\Users\shrid\Downloads\15 best multi-cuisine restaurants in Mumbai, New Delhi, Bengaluru, Kolkata and Goa.webp" alt="South Indian Buffet">
+                        <div class="food-details">
+                            <h3>South Indian Buffet</h3>
+                            <p>An assortment of South Indian delicacies with a burst of flavors.</p>
+                            <a href="#" class="order-link">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="food-section">
+                        <img src="C:\Users\shrid\Downloads\Greek-Chicken-Kabobs4788-650x975.jpg" alt="Greek Chicken">
+                        <div class="food-details">
+                            <h3>Greek Chicken</h3>
+                            <p>Juicy and tender Greek-style chicken with a zesty twist.</p>
+                            <a href="#" class="order-link">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="py-5 text-center">
+        <div class="container">
+            <h2>Login</h2>
+            <!-- Add your login form here -->
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <div class="container pt-5">
+        <h2>About Us</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod sem eget neque aliquet, et eleifend ex
+            interdum. Sed auctor, tortor ut posuere molestie, tellus libero efficitur tellus, sed tristique justo turpis
+            ut turpis.
+        </p>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 text-center">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <!-- Add your contact form or details here -->
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-5 text-center">
+        <div class="container">
+            <h2>Our Location</h2>
+            <!-- Add your map or address details here -->
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and custom script -->
+
+    <script>
+        var slideIndex = 1;
+        var slideInterval;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            clearInterval(slideInterval);
+            showSlides(slideIndex += n);
+            slideInterval = setInterval(() => {
+                showSlides(slideIndex += 1);
+            }, 2000);
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            showSlides(slideIndex = n);
+            slideInterval = setInterval(() => {
+                showSlides(slideIndex += 1);
+            }, 2000);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        slideInterval = setInterval(() => {
+            showSlides(slideIndex += 1);
+        }, 2000);
+    </script>
+</body>
+
+</html>

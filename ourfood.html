@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food Zone</title>
+	<link rel="shortcut icon" href="profile.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="C:\Users\shrid\OneDrive\Documents\style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<style>
+	/* Reset and general styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    text-transform: capitalize;
+}
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --orange: #f79f1f;
+    --text-color-1: #444;
+    --text-color-2: #666;
+    --bg-color-1: #fff;
+    --bg-color-2: #eee;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: var(--bg-color-2);
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--text-color-1);
+    font-size: 3.5rem;
+}
+
+.heading span {
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: var(--orange);
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 90%, 100% 83%, 100% 100%, 0% 100%);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 7%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo{
+	font-weight:bolder;
+	font-size:2.2rem;
+	color:var(--text-color-1);
+}
+.header .logo i{
+	color:var(--orange);
+}
+
+.header .search-form {
+    background: var(--bg-color-2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    width: 50rem;
+}
+
+
+.header .search-form input{
+	height:100%;
+	width:100%;
+	background: none;
+	text-transform:none;
+	font-size:1.5rem;
+	color:var(--text-color-1);
+	padding:1rem;
+}
+.header .search-form label{
+	font-size:2rem;
+	margin-right:1.5rem;
+	color:var(--text-color-1);
+	cursor:pointer;
+}
+.header .search-form label:hover{
+	color:var(--orange);
+}
+.header .icons div{
+	height:4.5rem;
+	width:4.5rem;
+	line-height:4.5rem;
+	border-radius:0.5rem;
+	font-size:2rem;
+	margin-left:0.5rem;
+	background:var(--bg-color-2);
+	color:var(--text-color-1);
+	cursor:pointer;
+	text-align:center;
+}
+
+#search-btn{
+	display:none;
+}
+.header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--bg-color-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 18rem; /* Adjust the width as per your requirement */
+    transform-origin: top right;
+    transform: scale(0);
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem; /* Adjust the padding as per your requirement */
+}
+
+.header .navbar.active {
+    display: flex;
+    transform: scale(1);
+}
+
+.header .navbar a {
+    display: block;
+    margin: 0.8rem 0; /* Adjust the margin as per your requirement */
+    padding: 1rem;
+    color: var(--text-color-1);
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+    background: var(--bg-color-2);
+    padding-left: 2rem;
+}
+
+
+section {
+    padding: 1.6rem 4.9%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4.9rem;
+    background: #fff;
+}
+
+.home .image {
+    flex: 1 1 45%;
+}
+
+.home .image img {
+    width: 100%;
+    display: block;
+}
+
+.home .content {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .content h3 {
+    color: var(--text-color-1);
+    font-size: 3.4rem; /* Adjust the font size */
+    text-align: center;
+}
+
+.home .content p {
+    color: var(--text-color-2);
+    font-size: 1.4rem; /* Adjust the font size */
+    line-height: 1.7;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.6rem 2.1rem; /* Adjust the padding */
+    font-size: 1.4rem; /* Adjust the font size */
+    color: #fff;
+    background: #ab6806;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem; /* Adjust the letter spacing */
+}
+
+.form-container form {
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    padding: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem; /* Adjust the gap */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-container form .inputbox {
+    flex: 1 1 20%;
+}
+
+.form-container form .inputbox span {
+    font-size: 1.4rem; /* Adjust the font size */
+    color: var(--text-color-2);
+}
+
+.form-container form .inputbox input {
+    font-size: 1.2rem; /* Adjust the font size */
+    color: var(--text-color-1);
+    background: var(--bg-color-2);
+    border-radius: 0.3rem;
+    margin: 0.4rem 0; /* Adjust the margin */
+    text-transform: none;
+    width: 100%;
+    padding: 1rem;
+}
+
+.form-container form .btn {
+    flex: 1 1 20%;
+    margin: 1.6rem 0.7rem; /* Adjust the margin */
+    align-self: flex-end;
+}
+
+.packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.packages .box-container .box {
+   
+    background: var(--bg-color-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    overflow: hidden;
+}
+
+.packages .box-container .box .image {
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.packages .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.packages .box-container .box .image h3 {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    font-weight: lighter;
+    padding: 0.5rem 1.5rem;
+    z-index: 1;
+}
+
+.packages .box .image h3 i {
+    color: var(--orange); /* corrected the spelling of var() */
+}
+
+
+.packages .box-container .box .price{
+	font-weight: 600;
+	color: var(--text-color-1);
+	font-size: 2.5rem;
+}
+.packages .box-container .content{
+	padding: 1.5rem;
+	padding-top:0;
+}
+.packages .box-container .box .price span{
+	font-weight:lighter;
+	color: var(--text-color-2);
+	font-size: 1.5rem;
+	text-decoration: line-through;
+}
+.packages .box-container .box .content p {
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+    color: var(--text-color-2);
+    line-height: 1.7;
+}
+
+</style>
+</head>
+<body>
+
+	
+<section class="packages" id="packages">
+    <h1 class="heading">Our <span>Foods</span></h1>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\Downloads\8cbf63efaa667c9d310268a7b8056b54.avif" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Easy Bites</h3>
+                <div class="price">
+                    570.99 <span>670.99</span>
+                </div>
+                <p>Delicious and quick bites perfect for any time of the day</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\Downloads\34a30e77063259.5c7cf3a10dcb1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Pizzeria</h3>
+                <div class="price">
+                    480.99 <span>500.99</span>
+                </div>
+                <p>Nothing brings people together like a piping hot, cheesy pizza straight from the oven</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\Downloads\Greek-Chicken-Kabobs4788-650x975.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Greek Chicken Kebab</h3>
+                <div class="price">
+                    740.99 <span>800.99</span>
+                </div>
+                <p>Savor the flavors of the Mediterranean with tender Greek chicken kebabs</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\Downloads\fb11bc94893011be4d57f229c94dc49c.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Biriyani</h3>
+                <div class="price">
+                    870.99 <span>950.99</span>
+                </div>
+                <p>Indulge in the aromatic allure of fragrant spices and tenderly cooked meats, all layered with perfectly seasoned basmati rice, in a sumptuous plate of biryani</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\Downloads\b1b720e5d70dc03a6354a375cdd79495.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Rotigar</h3>
+                <div class="price">
+                    750.99 <span>850.99</span>
+                </div>
+                <p>Savor the simple pleasure of soft, freshly made rotis, embodying the essence of tradition and warmth in every bite</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+	<div class="box">
+            <div class="image">
+                <img src="C:\Users\shrid\Downloads\istockphoto-1316145932-170667a.webp" alt="">
+            </div>
+            <div class="content">
+                <h3><i class="fas fa-utensils"></i>Fries for life</h3>
+                <div class="price">
+                    860.99 <span>900.99</span>
+                </div>
+                <p>Experience the ultimate culinary harmony with the fusion of rich, cheesy pizza and juicy, succulent burgers, each bite a celebration of flavor and indulgence</p>
+                <a href="carttttt.html" class="btn">Order Now</a>
+            </div>
+        </div>
+        <!-- Add other box elements similarly -->
+	
+</div>
+
+
+    </div>
+</section>
+</body>
+</html>
+
