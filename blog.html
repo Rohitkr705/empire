@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Add the following line for Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<style>
+	
+        .oval-box {
+            background-color: #f9e7d2;
+            padding: 20px;
+            text-align: right;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+        }
+	.lead.my-3 {
+            font-family: 'Montserrat', sans-serif; /* Replace 'Montserrat' with your preferred Google Font */
+        }
+
+        .oval-box a.order-link {
+            padding: 12px 20px;
+        }
+
+        .oval-box a {
+            color: #343a40;
+            margin-right: 20px;
+            text-decoration: none; /* Add this line to remove underlines */
+        }
+
+        .oval-box a.order-link {
+            color: #fff;
+            background-color: #dc3545;
+            text-decoration: none; /* Add this line to remove underlines */
+        }
+	.footer{
+	background:var(--bg-color-1);
+}
+.footer .box-container{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:1.4rem;
+}
+.footer .box-container .box h3{
+	font-size:1.4rem;
+	color:var(--text-color-1);
+	padding:1rem 0;
+}
+.footer .box-container .box a{
+	display:block;
+	font-size:1.0rem;
+	color:var(--text-color-2);
+	padding:1rem 0;
+}
+.footer .box-container .box a i{
+	padding-right:0.5rem;
+	color:var(--orange);
+}
+.footer .box-container .box a:hover i{
+	padding-right:2rem;
+}
+	* {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    text-transform: capitalize;
+}
+html {
+    
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --orange: #f79f1f;
+    --text-color-1: #444;
+    --text-color-2: #666;
+    --bg-color-1: #fff;
+    --bg-color-2: #eee;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: var(--bg-color-2);
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+   <div class="container-fluid p-0" style="padding: 20px 0;">
+    <div class="oval-box" style="padding: 15px; ">
+        <a href="C:\Users\shrid\OneDrive\Documents\ravi\about.html" class="mr-4">About</a>
+        <a href="C:\Users\shrid\OneDrive\Documents\ravi\location.html" class="mr-4">Location</a>
+        <a href="C:\Users\shrid\OneDrive\Documents\ravi\blogggg.html" class="mr-4" style="flex: 1;"> Our Blog</a>
+        <a href="C:\Users\shrid\OneDrive\Documents\orderfood.html" class="order-link" style="padding: 8px 20px; border-radius: 40px;">Order Food</a>
+    </div>
+</div>
+
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="C:\Users\shrid\OneDrive\Documents\r1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\r2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Users\shrid\OneDrive\Documents\r3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-6 px-0">
+            <h1 class="display-4" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 2.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Hii There!</h1>
+            <p class="lead my-3" style=" font-size: 20px; color: #7a5230; line-height: 1.6;">I’m Ravi, the cook, writer and photographer behind this little blog. I’ve grown up in
+                the kitchen along side my mum and grandmothers and conversations in my family are always about the next
+                meal. I’ve picked up their love for food along the way, and with this blog, I share my food story with
+                you.</p>
+            
+        </div>
+    </div>
+
+    <div class="p-3 mb-2 p-3 mb-2 bg-body-secondary">
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="C:\Users\shrid\OneDrive\Documents\c11.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                    <h2 class="fw-normal"  style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 1.9em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; top: 10px; left: 10px; z-index: 1;">Chimichurri Shrimp with Tomatoes</h2>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #7a5230; line-height: 1.6;">Saucy, punchy, and delightful Chimichurri Shrimp! Served with a tomato salad, a pile of hot
+                        steamy
+                        rice, and a dollop of creamy tzatziki.</p>
+                   
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="C:\Users\shrid\OneDrive\Documents\c22.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                    <h2 class="fw-normal" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 1.9em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Creamy Baked Orzo with Meatballs</h2>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #7a5230; line-height: 1.6;">Dinner is ready! Creamy baked orzo with bits of garlic butter peeking through, a luscious
+                        tomato-y
+                        base, and meatballs if you want. Silky, cozy, and a hit with everyone!</p>
+                    
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="C:\Users\shrid\OneDrive\Documents\c33.png" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+                    <h2 class="fw-normal" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 1.9em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Kale Apple Salad with Crispy Shallots</h2>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #7a5230; line-height: 1.6;">I love this Kale Apple Salad! Kale, brussels sprouts, rosemary cashews, apples, fried bread
+                        cheese,
+                        crispy shallots, and crisp apple maple dressing!</p>
+                    
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+            <br>
+            <div class="row featurette">
+                <div class="col-md-7">
+
+                    <h2 class="featurette-heading fw-normal lh-1" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 2.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Chimichurri Shrimp with Tomatoes <span
+                            class="text-body-secondary"></span></h2>
+                    <br>
+                    <p class="lead" style="font-family: 'Poppins', sans-serif; font-size: 18px; color: #7a5230; line-height: 1.6;">Saucy, punchy, and delightful Chimichurri Shrimp! Served with a tomato salad, a pile
+                        of
+                        hot steamy rice, and a dollop of creamy tzatziki. Garlic, herbs, a little bit of heat and the
+                        punch
+                        of red wine vinegar on buttery, golden grilled shrimp. This is a FAVORITE for us right now!
+
+                        We are trying to work more protein into our lives (we: Bjork) and shrimp in general has been
+                        such a
+                        winner. The girls like it, and I keep bags stocked in the freezer so we can easily thaw, dry,
+                        and
+                        cook up a bag of shrimp with minimal effort in 20-or-so minutes. God bless it! This is our
+                        latest
+                        iteration of a weeknight shrimp dinner – a quickly blitzed chimichurri sauce that coats the
+                        shrimp
+                        both before and after grilling. I like to put them on skewers because it feels more fun, and
+                        brushing them with extra sauce right before you chomp into them is the ultimate in satisfying.
+                       </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="C:\Users\shrid\OneDrive\Documents\c1.jpg"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+                        fill="var(--bs-secondary-color)" dy=".3em"></text></svg>
+                </div>
+            </div>
+            <br>
+            <hr class="featurette-divider">
+            <br>
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading fw-normal lh-1" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 2.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Creamy Baked Orzo with Meatballs <span
+                            class="text-body-secondary"></span></h2>
+                    <br>
+                    <p class="lead" style="font-family: 'Poppins', sans-serif; font-size: 18px; color: #7a5230; line-height: 1.6;">This is the definition of a weeknight hero! It’s comforting, cozy, and ridiculously
+                        easy
+                        to make.
+
+                        Pour everything in a pan, bake it in the oven, and be rewarded with a creamy baked orzo that is
+                        full
+                        of simple, nostalgic flavor. It has a Spaghetti-O’s vibe in the most delicious way – a little
+                        extra
+                        starchy with the baked-all-together texture, plus rocking that comforting taste of store-bought
+                        tomato soup. And with all the coziness, the addition of fresh garlic, butter, Parmesan, and
+                        fresh
+                        basil gives it the perfect amount of lift.
+
+                        I actually love this meal without any meatballs at all – the first time I made it, I just had
+                        the
+                        roasty tomatoes, the creamy tomato orzo, and the parmesan, garlic, butter, and basil finishers.
+                        It
+                        was SO good, I practically ate half the pan by myself.
+
+                      </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="C:\Users\shrid\OneDrive\Documents\c2.jpg"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title></title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+                        fill="var(--bs-secondary-color)" dy=".3em"></text></img>
+                </div>
+            </div>
+            <br>
+            <hr class="featurette-divider">
+            <br>
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 2.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Kale Apple Salad with Crispy Shallots <span
+                            class="text-body-secondary"></span></h2>
+                    <br>
+                    <p class="lead" style="font-family: 'Poppins', sans-serif; font-size: 18px; color: #7a5230; line-height: 1.6;">If I’m being honest, this salad started as just a vehicle for eating the garlic
+                        bread
+                        cheese from Trader Joe’s (whoops). But it has become so much more that that. This is currently
+                        my
+                        fall *anything* salad – as long as you’ve got your kale and brussels base, and some juicy apples
+                        and
+                        crispy shallots, the rest can be up to you. My Thoughts on Cheese: Of course, the garlic bread
+                        cheese from Trader Joe’s is truly delightful and I would highly recommend it. But if you can’t
+                        get
+                        your hands on it, halloumi would be the next best thing! I like to pan fry it and add it to the
+                        salad while it’s soft and golden brown.
+
+                        My Thoughts on Dressing: The Salad Girl Crisp Apple Maple dressing is delicious for fall-ish
+                        salads.
+                        And being that this is an SOS recipe and we are looking for shortcuts, this fits the bill. If
+                        you
+                        can’t find it, use any sweet, maple-leaning dressing (homemade or store-bought!) that you like!
+                        
+
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="C:\Users\shrid\OneDrive\Documents\c3.jpg"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+                        fill="var(--bs-secondary-color)" dy=".3em"></text></img>
+                </div>
+            </div>
+            <br>
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Recipe</strong>
+                        <h3 class="mb-0" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 1.6em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">House Favorite Garlic Bread</h3>
+                        <div class="mb-1 text-body-secondary">Oct 22</div>
+                        <p class="card-text mb-auto">I mean, you can make what you want for dinner, but what gets people
+                            excited is the garlic bread. This is our house favorite garlic ...</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="C:\Users\shrid\OneDrive\Documents\i1.jpg" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em"></text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Recipe</strong>
+                        <h3 class="mb-0" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 1.6em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Pumpkin Muffins with Maple Cream Cheese Filling</h3>
+                        <div class="mb-1 text-body-secondary">Oct 23</div>
+                        <p class="mb-auto">Pumpkin muffins are getting a lightly crunchy, sparkly cinnamon sugar
+                            topping,
+                            and then stuffed to the brim with maple cream cheese whipped cream. YUM...</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="C:\Users\shrid\OneDrive\Documents\i2.jpg" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em"></text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Recipe</strong>
+                        <h3 class="mb-0" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 1.6em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Swedish Pancakes</h3>
+                        <div class="mb-1 text-body-secondary">Oct 24</div>
+                        <p class="card-text mb-auto">My go-to recipe for Swedish pancakes! Buttery, tender, and thick
+                            enough
+                            to sink your teeth into but with a nice thin, delicate, lacy edge...</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="C:\Users\shrid\OneDrive\Documents\i3.jpg" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em"></text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Recipe</strong>
+                        <h3 class="mb-0" style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 1.6em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Roasted Corn and Fried Egg Tacos</h3>
+                        <div class="mb-1 text-body-secondary">Oct 25</div>
+                        <p class="mb-auto">Roasted Corn and Fried Egg Tacos with a crispy, cheesy, lacy-edged egg, corn,
+                            cotjia cheese, cilantro, pickled onions and sauce all piled into a tortilla with refried
+                            beans....</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="C:\Users\shrid\OneDrive\Documents\i4.jpg" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em"></text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <hr>
+        
+        
+        
+		<section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Our branching</h3>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>India</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Russia</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Japan</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>France</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Canada</a>
+
+                </div>
+                <div class="box">
+                    <h3>Quick links</h3>
+                    <a href="#"><i class="fas fa-chevron-right"></i>Home</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i>Packages</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i>Services</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i>Prices</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i>Blogs</a>
+                </div>
+                <div class="box">
+                    <h3>Contact-Info</h3>
+                    <a href="#"><i class="fas fa-phone"></i>+91 8967 7685 65</a>
+                    <a href="#"><i class="fas fa-phone"></i>+91 1234 6545 65</a>
+                    <a href="#"><i class="fas fa-envelope"></i>shri@gmail.com</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Bangalore, India</a>
+                </div>
+                <div class="box">
+                    <h3>Follow-us</h3>
+                    <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+                    <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="#"><i class="fab fa-linkedin"></i>Linkedin</a>
+                    <a href="#"><i class="fab fa-pinterest"></i>Pinterest</a>
+                </div>
+
+            </div>
+<footer class="container"><br>
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p><br>
+            <hr>
+        </section>
+    </footer>
+</body>
+
+</html>
