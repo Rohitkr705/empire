@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">	
+<style>
+        .oval-box {
+    		background-color: #f9e7d2;
+    		padding: 20px;
+    		text-align: right;
+		position: fixed;
+    		width: 100%;
+    		z-index: 1000;
+    		top: 0;
+    		
+	}
+	.centered-text {
+            text-align: center;
+        }
+
+        .creamish-box {
+            background-color: #f5f5dc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+	 .centered-heading {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .centered-heading h2 {
+            font-family: 'Indie Flower', cursive;
+            color: #f8b500;
+            font-size: 2.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+	.justified-text {
+            text-align: justify;
+        }
+
+        
+	.oval-box a.order-link {
+    		padding: 12px 20px;
+    		
+	}
+        .oval-box a {
+            color: #343a40;
+            margin-right: 20px;
+        }
+
+        .oval-box a.order-link {
+            color: #fff;
+            background-color: #dc3545;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .food-section {
+            position: relative;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 20px; /* Rounded corners */
+            overflow: hidden;
+            height: 300px; /* Adjust height as needed */
+        }
+
+        .food-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .food-details {
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .food-section:hover .food-details {
+            opacity: 1;
+        }
+
+        .food-details h3 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        .food-details p {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        .food-details .order-link {
+            display: block;
+            color: #fff;
+            background-color: #dc3545;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: 0.3s; /* Smooth transition */
+        }
+
+		.gallery-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .gallery-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+        /* Style for the Trending Foods */
+        .food-name {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: bold;
+}
+
+        .food-section:hover .order-link {
+            background-color: #fff;
+            color: #dc3545;
+        }
+
+        /* Middle buttons style */
+        .middle-buttons {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            line-height: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 50%;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: 0.3s;
+        }
+
+        .prev {
+            left: 5%;
+        }
+
+        .next {
+            right: 5%;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #dc3545;
+        }
+	 #appetizers .food-section {
+        border-radius: 0; /* Remove the rounded corners */
+        overflow: visible; /* Show the complete image */
+        height: auto; /* Set height to auto to maintain aspect ratio */
+    }
+
+    #appetizers .food-section img {
+        width: 100%; /* Make the width 100% to occupy the full width */
+        height: auto; /* Allow the height to adjust automatically */
+    }
+    </style>
+
+
+
+</head>
+
+<body>
+     
+
+   <div class="container-fluid p-0" style="padding: 20px 0;">
+        <div class="oval-box" style="padding: 15px; ">
+        <a href="#about" class="mr-4" >About</a>
+        <a href="location.html" class="mr-4" >Location</a>
+         <a href="C:\Users\shrid\OneDrive\Documents\blog.html" class="mr-4"> Our Blog</a>
+        <a href="C:\Users\shrid\OneDrive\Documents\orderfood.html" class="order-link" style="padding: 8px 20px; border-radius: 40px;">Order Food</a>
+    </div>
+</div>
+
+
+
+   <section id="home" class="py-5 text-center" style="margin: 0; padding: 0;">
+        <div class="container-fluid" style="margin: 0; padding: 0;">
+            <div class="row" style="margin: 0; padding: 0;">
+                <!-- Constant Image on the Left Side with Text -->
+                <div class="col-md-6 p-0" style="position: relative;">
+                    <img src="C:\Users\shrid\Downloads\madhus-mayfair-1639085143.jpg" style="width:100%; height:auto;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                        <h1 style="color: white; font-size: 3em;">Welcome to Our Restaurant</h1>
+                        <p style="color: white; font-size: 1.5em;">Discover the exquisite taste of our special dishes.</p>
+                    </div>
+                </div>
+                <!-- Slideshow on the Right Side -->
+                <div class="col-md-6 p-0 slideshow-container" style="position: relative;">
+
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\best-restaurants-beauty-essex.jpg" style="width:100%; height:auto; max-height: 600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\image.jpg" style="width:100%; max-height:600px">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\Chama-Mama-table-full-of-dishes.jpg" style="width:100%; max-height:600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\photo-1670058124043-4f55e08d0f8f.avif" style="width:100%; height:420px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\34a30e77063259.5c7cf3a10dcb1.jpg" style="width:100%;max-height:600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\get-inspired-food-photography-tips-1-f9283f1f-d5f8-11ea-bea9-f8bc127793a9.jpg" style="width:100%; height:420px; max-height:600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\restaurants.jpg" style="width:100%; height:420px; max-height:600px;">
+                    </div>
+                    <div class="mySlides">
+                        <img src="C:\Users\shrid\Downloads\Blog7.jpg" style="width:100%; height:420px; max-height:600px;">
+                    </div>
+
+                    <div class="middle-buttons">
+                        <button class="prev" onclick="plusSlides(-1)">❮</button>
+                        <button class="next" onclick="plusSlides(1)">❯</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container text-center">
+             <h2 style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 2.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">EMPIRE STORY</h2>
+<section id="about" class="py-5">
+    
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Embedded YouTube video -->
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ap9fWufGAic?feature=shared" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    THE YEAR – 1966.</p><br>
+<p>THE MAN – Mr.Abdul Rahim from Malaysia.</p>
+
+<p>THE PLACE – A small restaurant housed in one of the alleys of historic Shivajinagar, Bangalore.
+                </p><br>
+                <p>
+                   This is where we began…</p><br>
+
+<p>Back in 1966, Mr. Abdul Rahim Haji, armed with a strong background in the catering business, came to India from Malaysia. He opened the first Empire Restaurant in a small alley in Shivajinagar, Bangalore, which humbly served healthy & authentic recipes, alongside the newspaper and early morning banter. His eager customers just came by for a hot, steaming cuppa chai, or even ‘Haji’s Kappa and Mutton’ for breakfast! Here was a man with not only a passion for food but also a keen business sense.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="rise-of-empire" class="py-5">
+        <div class="container">
+            <div class="row">
+
+            <p  class="justified-text">
+No dreamer is ever too small, no dream ever too big.
+Empire has come a long way. There are older restaurants and places with cooler backstories maybe, but for nearly 50 plus years, everyone in Bangalore and beyond, young and old, is familiar with ‘Empire Restaurant’.</p><br>
+
+<p  class="justified-text">The early days were tougher times, but Mr.Abdul Haq single-handedly made ‘Empire’ possible. Abdul Rahim’s younger son Abdul Azeez joined his brother Abdul Haq and together they ran the business with grit and fervour. Exotic food like brain fry and kebabs were served, and also affordable ghee rice and Kerala Parotta. They consistently built rapport, making each interaction with customers unique; such was their passion, a sure winner all the way!</p><br>
+
+<p  class="justified-text">When the building, which housed the restaurant, had to be demolished for renovation, it is said that Abdul Haq with the help of his brothers, managed the demolition even as they ran the business from one section of the shop.</p><br>
+
+<p  class="justified-text">From a small, obscure cafeteria, Empire has grown to the latest lush Highway Restaurant en-route Bangalore-Mysore. The Empire journey that began in 1966, with one person and the F&B business he built, is as legendary as the exotic and affordable food that’s served till date.</p><br>
+
+<p  class="justified-text">Today, if Mr.Abdul Rahim Haji could witness the pinnacles to which his children and grandchildren have taken his dreams, he would be a proud man! For a restaurant business spanning 5 decades, it is no small feat to stay relevant and fresh, and surely, Empire has achieved it!</p><br>
+<br>
+
+
+ <h4 style="font-family: 'Indie Flower', cursive; color: #f8b500;  font-weight: bold; text-transform: uppercase;  top: 10px; left: 10px; z-index: 1;">Discover the Empire Experience</h4>
+
+
+<p  class="justified-text">A sense of playfulness is instilled in our dishes, with innovative cooking techniques and unique presentations that we can confidently say will stimulate your mind as well as your senses.</p><br>
+
+<p  class="justified-text">Empire is proud that the food served is one that people can have on a daily basis. Through personal interpretations of ingredients and taste, the meticulous cooks have arrived at a scrumptious menu where flavour, texture and harmony are paramount.</p><br>
+
+<p  class="justified-text">Right from the selection of our raw materials, our meat and poultry, from cooking to our final presentation before our valued customer, every stage is scrutinised and is of utmost importance to us.</p><br><br>
+
+ <h4 style="font-family: 'Indie Flower', cursive; color: #f8b500;  font-weight: bold; text-transform: uppercase;  top: 10px; left: 10px; z-index: 1;">Sea Food</h4>
+
+<p  class="justified-text">Enjoy the fresh Seafood cooked with aromatic spices and rich flavour, balanced to perfection, a must for all pescetarians. These tasty morsels have sustained our palates for centuries – Red snapper and pomfrets and Amur barbequed to perfection, Al-Faham, Tawa delicacies, Hot Chilli Basa, Squid, Spicy Lemon Basa, the fillets, are some of Empire’s all-time favourites.</p><br><br>
+ <h4 style="font-family: 'Indie Flower', cursive; color: #f8b500;  font-weight: bold; text-transform: uppercase;  top: 10px; left: 10px; z-index: 1;">Empire Juice Shops</h4>
+
+<p  class="justified-text">The truth is that it wasn’t started without a thought. Forget coffee shops, juice shops turned out to be a very promising business opportunity then and this was what planted the seed. Thus was born Empire Juice shops. Now it’s been years that the Juice shops have been making enticing smoothies and juices; here, the know-how of the right combinations and experimenting with different flavours is a given. The menu boasts simple concoctions like Faloodas with a twist, fruit salads and natural ice creams. The natural fruit juices do not contain any added water.</p><br>
+
+<p  class="justified-text">We continue to love what we do and are a growing business.</p>
+ 
+ </div>
+</div>
+</section>
+<section id="rise-of-empire" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 centered-heading">
+                    <h2>RISE OF EMPIRE</h2>
+<p>It has been an exciting five decades; we have prudently grown along with the city. Empire Restaurant is now one among the leading chains of restaurants in Bangalore. We have a heartfelt need to showcase to the world the cuisine of Bangalore, as our loyalties lie in this city. It goes without saying that Bangalore is on the radar of everyone from foodies to families and is perfect for a weekend outing, but it is also this beautiful city and the people that gave us the opportunity to pursue our dreams and make it a reality, and hence the love for this gorgeous city.</p><br><br>
+
+<p>Empire is proud of its progress, under management that has been competent and instrumental in achieving the milestones thus far. All progress takes place outside the comfort zone and under the towering leadership of late Mr.Abdul Haq, Hotel Empire took a remarkable turn in terms of service and business. They say people who succeed have momentum, the more they succeed, and the more they endeavour to reach higher plateaus. Today, the family’s third generation of achievers is taking the Empire chain to the next level.</p><br><br>
+
+<p>Empire is not simply a restaurant; it is a world of passion where we relate to the need to offer people with sumptuous and satisfying food, thereby finding a place in their hearts. It is a unique place, where every creation and every element has its own meaning because they contribute to creating a journey, to discover the gastronomic culture of a country. We take every opportunity to give our patrons an intense and enveloping taste experience, in which the flavours and colours, together with that spark of inspiration and creativity, satisfies and delights a hungry belly.</p></p>
+
+<p>We never sit on our laurels. At Empire, we continue to test new technology, cooking methods, marketing tactics, and even new ways to operate our business to create the best culture and food. We presently have arrived at a sustainable business model though profit was never our purpose.  On the contrary, our driving force is ‘volume’. Under the aegis of our late Mr.Abdul Haq, there was a remarkable shift in our strategies in 2007 to expand across the city.  We flaunt a common theme across all our 24 outlets in a very standardised operation, following the ‘central kitchen’ concept for quality procurement and taste consistency.</br></br>
+
+<p>Food is a language that connects and is also the identity of a people. Our dream is to make Empire a place to come back to, because, to us, our customer is our honoured guest and will be treated like a king, every time.</p><br><br>
+        </div>
+            </div>
+        </div>
+    </section>
+<div class="creamish-box">
+        <p class="centered-text">
+            Late Mr. Abdul Haq<br>
+            Former chairman & Managing Director<br><br>
+            “Keep the items affordable, but never compromise on the quality. Employees should always be treated fairly; be stringent on the face but have a heart full of compassion. Don’t compromise on ethics and never be biased towards your employees and suppliers. Always respect vendors for their contributions; never keep pending payments even if it were to be a single rupee”..!
+        </p>
+    </div>
+
+
+    <br><br>
+
+    <section id="address" class="py-5 text-center" style="background-color: #f9e7d2; position: relative;">
+        <div class="container">
+             <h2 style="font-family: 'Indie Flower', cursive; color: #f8b500; font-size: 2.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; top: 10px; left: 10px; z-index: 1;">Address</h2>
+            <div class="row" style="display: flex; align-items: center; justify-content: center;">
+                <div class="col-md-6">
+                    <div style="text-align: center;">
+                        <p style="font-size: 1.2em; margin-top: 20px; text-align: center; width: 80%; line-height: 1.8;">Empire Hotel<br>
+                            CORPORATE OFFICE
+NKP Empire Ventures Pvt. Ltd.
+#14 Pottery Road, Richards Town
+Opposite Bangalore East Station, Bengaluru, 560005 - Karnataka India
+
+REGISTERED OFFICE
+No. 78, Central Street, Off. Infantry Road, Bangalore -560001
+
+www.hotelempire.in
+</p>
+                    </div>
+                </div>
+               <div style="position: absolute; top: 20px; right: 20px; background-color: #ffbf00; padding: 10px; border-radius: 5px;">
+        <p>Follow us on:</p>
+        <div style="display: flex;">
+            <a href="#"><i class="fab fa-facebook-square fa-2x" style="color: #3b5998; margin-right: 10px;"></i></a>
+            <a href="#"><i class="fab fa-twitter-square fa-2x" style="color: #00acee; margin-right: 10px;"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x" style="color: #bc2a8d;"></i></a>
+        </div>
+    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add footer section here -->
+ <!-- Bootstrap JS and custom script -->
+
+    <script>
+        var slideIndex = 1;
+        var slideInterval;
+
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            clearInterval(slideInterval);
+            showSlides((slideIndex += n));
+            slideInterval = setInterval(() => {
+                showSlides((slideIndex += 1));
+            }, 2000);
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            showSlides((slideIndex = n));
+            slideInterval = setInterval(() => {
+                showSlides((slideIndex += 1));
+            }, 2000);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (slides.length > 0) {
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+        }
+
+        slideInterval = setInterval(() => {
+            showSlides((slideIndex += 1));
+        }, 2000);
+
+   
+   
+
+  document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector('form');
+        const submitButton = document.querySelector('button[type="submit"]');
+        const messageContainer = document.createElement('div');
+        messageContainer.style.position = 'fixed';
+        messageContainer.style.bottom = '20px';
+        messageContainer.style.left = '50%';
+        messageContainer.style.transform = 'translateX(-50%)';
+        messageContainer.style.padding = '10px 20px';
+        messageContainer.style.backgroundColor = '#dc3545';
+        messageContainer.style.color = '#fff';
+        messageContainer.style.borderRadius = '5px';
+        messageContainer.style.zIndex = '1000';
+        messageContainer.style.display = 'none';
+
+        document.body.appendChild(messageContainer);
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            setTimeout(function() {
+                form.reset(); // Clear form inputs
+                setTimeout(function() {
+                    messageContainer.textContent = 'Response submitted!';
+                    messageContainer.style.display = 'block';
+                    setTimeout(function() {
+                        messageContainer.style.display = 'none';
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        });
+    });
+</script>
+</body>
+
+</html>
